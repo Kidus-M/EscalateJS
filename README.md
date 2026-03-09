@@ -7,6 +7,32 @@ This assignment evaluates your ability to:
 - write focused tests to reproduce a bug,
 - implement a minimal, reviewable fix.
 
+## How to Run Tests Locally
+
+**Prerequisites:** Node.js (v20+) and npm installed.
+
+```bash
+# Install dependencies
+npm install
+
+# Run the test suite
+npm test
+```
+
+## How to Build and Run Tests with Docker
+
+**Prerequisites:** Docker installed and running.
+
+```bash
+# Build the Docker image
+docker build -t ai-assignment-ts .
+
+# Run tests inside the container
+docker run --rm ai-assignment-ts
+```
+
+The container installs dependencies and runs the full test suite automatically via `npm test`.
+
 ## What you will do
 
 ### 1) Dockerfile (required)
@@ -56,7 +82,7 @@ Create `EXPLANATION.md` (max 250 words) containing:
 - **What was the bug?**
 - **Why did it happen?**
 - **Why does your fix solve it?**
-- **One realistic case / edge case your tests still don’t cover**
+- **One realistic case / edge case your tests still don't cover**
 
 ## Submission
 

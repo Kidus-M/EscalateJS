@@ -20,7 +20,8 @@ export class HttpClient {
       // BUG: truthiness + instanceof check misses the "plain object" token case.
       if (
         !this.oauth2Token ||
-        (this.oauth2Token instanceof OAuth2Token && this.oauth2Token.expired)
+        !(this.oauth2Token instanceof OAuth2Token) ||
+        this.oauth2Token.expired
       ) {
         this.refreshOAuth2();
       }
